@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
+<title>Document</title>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    function UI() {
+        var style = {
+            padding: "30px",
+            backgroundColor: "green",
+            color: "blue",
+        };
+        var title = "React js library";
+        var id = 101;
+        var names = ["shivam","ashish","surbhi"];
+        return (
+            <div style = {style} >
+                <h2>
+                    {title} {id}
+                    </h2>
+                    <ol>
+                        <li>{name[0]}</li>
+                        <li>{name[1]}</li>
+                        <li>{name[2]}</li>
+                        </ol>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eveniet consectetur inventore velit voluptatibus ea fuga necessitatibus blanditiis. Dolor excepturi est quia pariatur beatae fuga nemo, necessitatibus praesentium facilis non at dicta quod saepe sequi similique ipsum dolores tempora? Quidem, laboriosam delectus. Reiciendis deleniti eaque impedit rem dolorum ex possimus.</p>
+                        </div>
+        );
+    }
+    function reUse() {
+        return (
+            <div>
+                {UI()} {UI()}
+                </div>
+        );
+    }
+    function App() {
+        ReactDOM.render(reUse(),document.getElementById("root"))
+    }
+    App()
+    </script>
+</body>
+</html>
